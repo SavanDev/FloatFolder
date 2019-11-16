@@ -31,13 +31,7 @@ namespace FloatFolder
             if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FloatFolder"))
                 Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FloatFolder");
 
-            //Verificar configuración
-            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\FloatFolder\\" + filename))
-            {
-                Application.Run(new Form1());
-            }
-            else
-                Application.Run(new Configuracion());
+            Application.Run(new Configuracion());
         }
     }
 }

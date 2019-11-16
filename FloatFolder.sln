@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2012
+# SharpDevelop 5.2
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatFolder", "FloatFolder\FloatFolder.csproj", "{D30E9E56-A8F1-4837-8868-B0265FD9FA6B}"
