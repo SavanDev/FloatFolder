@@ -21,19 +21,6 @@ namespace FloatFolder
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0: pictureBox1.Image = Properties.Resources.my_files;
-                    break;
-                case 1: pictureBox1.Image = Properties.Resources.files;
-                    break;
-                case 2: pictureBox1.Image = Properties.Resources.Folder_icon;
-                    break;
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if(dialogOpen.ShowDialog() == DialogResult.OK)

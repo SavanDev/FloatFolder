@@ -36,7 +36,7 @@
     <StartupObject>FloatFolder.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\my_files.ico</ApplicationIcon>
+    <ApplicationIcon>FloatFolder.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -143,8 +143,12 @@
     <None Include="Resources\my_files.ico" />
     <None Include="Resources\Icon1.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="System" />
+    <None Include="Resources\FloatFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FloatFolder.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
