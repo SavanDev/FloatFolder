@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Resources;
 using System.Windows.Forms;
 using System.CodeDom.Compiler;
-using System.Diagnostics;
 
 namespace FloatFolder
 {
@@ -41,29 +38,6 @@ namespace FloatFolder
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int LenghtTotal = Nombre.Count + Url.Count;
-            string[] guardado = new string[LenghtTotal];
-            GlobalVariables.nombre = txtName.Text;
-
-            int nIndex = 0;
-            int uIndex = 0;
-
-            for (int i = 0; i < guardado.Length; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    guardado[i] = Nombre[nIndex];
-                    nIndex++;
-                }
-                else
-                {
-                    guardado[i] = Url[uIndex];
-                    uIndex++;
-                }
-            }
-
-            File.WriteAllLines(GlobalVariables.url + "\\" + GlobalVariables.nombre, guardado);
-
             //Generar Icono
             pictureBox1.Image.Save("temp.png", System.Drawing.Imaging.ImageFormat.Png);
             FileStream input = File.OpenRead("temp.png");
@@ -86,7 +60,7 @@ namespace FloatFolder
 		    parameters.ReferencedAssemblies.Add("System.Drawing.dll");
 		    parameters.ReferencedAssemblies.Add("System.Windows.Forms.dll");
 		    parameters.ReferencedAssemblies.Add("System.IO.dll");
-		    CompilerResults results = codeProvider.CompileAssemblyFromSource(parameters, System.Text.Encoding.UTF8.GetString(FloatFolder.Properties.Resources.appTemplate));
+		    CompilerResults results = codeProvider.CompileAssemblyFromSource(parameters, "TODO");
 		    
 		    if (results.Errors.Count > 0)
 		    {
