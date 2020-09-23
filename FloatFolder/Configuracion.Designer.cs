@@ -43,6 +43,7 @@
         	this.groupBox1 = new System.Windows.Forms.GroupBox();
         	this.statusStrip1 = new System.Windows.Forms.StatusStrip();
         	this.lblCredit = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.stripVersion = new System.Windows.Forms.ToolStripStatusLabel();
         	((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
         	this.groupBox1.SuspendLayout();
         	this.statusStrip1.SuspendLayout();
@@ -67,7 +68,7 @@
         	// label2
         	// 
         	this.label2.AutoSize = true;
-        	this.label2.Location = new System.Drawing.Point(12, 57);
+        	this.label2.Location = new System.Drawing.Point(12, 51);
         	this.label2.Name = "label2";
         	this.label2.Size = new System.Drawing.Size(31, 13);
         	this.label2.TabIndex = 2;
@@ -75,7 +76,7 @@
         	// 
         	// button1
         	// 
-        	this.button1.Location = new System.Drawing.Point(15, 179);
+        	this.button1.Location = new System.Drawing.Point(15, 173);
         	this.button1.Name = "button1";
         	this.button1.Size = new System.Drawing.Size(100, 23);
         	this.button1.TabIndex = 4;
@@ -100,6 +101,7 @@
         	this.listBox1.Name = "listBox1";
         	this.listBox1.Size = new System.Drawing.Size(249, 95);
         	this.listBox1.TabIndex = 7;
+        	this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListBox1KeyDown);
         	// 
         	// button3
         	// 
@@ -113,6 +115,7 @@
         	// 
         	// button4
         	// 
+        	this.button4.Enabled = false;
         	this.button4.Location = new System.Drawing.Point(87, 122);
         	this.button4.Name = "button4";
         	this.button4.Size = new System.Drawing.Size(75, 23);
@@ -128,8 +131,8 @@
         	// 
         	// pictureBox1
         	// 
-        	this.pictureBox1.Image = global::FloatFolder.Properties.Resource.FloatFolder;
-        	this.pictureBox1.Location = new System.Drawing.Point(15, 73);
+        	this.pictureBox1.Image = global::FloatFolder.Properties.Resource.Folder;
+        	this.pictureBox1.Location = new System.Drawing.Point(15, 67);
         	this.pictureBox1.Name = "pictureBox1";
         	this.pictureBox1.Size = new System.Drawing.Size(100, 100);
         	this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,10 +162,12 @@
         	// statusStrip1
         	// 
         	this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.lblCredit});
+			this.lblCredit,
+			this.stripVersion});
         	this.statusStrip1.Location = new System.Drawing.Point(0, 215);
         	this.statusStrip1.Name = "statusStrip1";
         	this.statusStrip1.Size = new System.Drawing.Size(397, 22);
+        	this.statusStrip1.SizingGrip = false;
         	this.statusStrip1.TabIndex = 13;
         	this.statusStrip1.Text = "statusStrip1";
         	// 
@@ -171,6 +176,15 @@
         	this.lblCredit.Name = "lblCredit";
         	this.lblCredit.Size = new System.Drawing.Size(159, 17);
         	this.lblCredit.Text = "SavanDev 2020 - MIT License";
+        	// 
+        	// stripVersion
+        	// 
+        	this.stripVersion.Name = "stripVersion";
+        	this.stripVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+        	this.stripVersion.Size = new System.Drawing.Size(192, 17);
+        	this.stripVersion.Spring = true;
+        	this.stripVersion.Text = "toolStripStatusLabel1";
+        	this.stripVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
         	// 
         	// Configuracion
         	// 
@@ -186,9 +200,10 @@
         	this.Controls.Add(this.txtName);
         	this.Controls.Add(this.label1);
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+        	this.Icon = global::FloatFolder.Properties.Resource.FloatFolder_1;
         	this.MaximizeBox = false;
         	this.Name = "Configuracion";
-        	this.Text = "Settings";
+        	this.Text = "FloatFolder - Settings";
         	((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
         	this.groupBox1.ResumeLayout(false);
         	this.statusStrip1.ResumeLayout(false);
@@ -215,5 +230,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblCredit;
+        private System.Windows.Forms.ToolStripStatusLabel stripVersion;
     }
 }
