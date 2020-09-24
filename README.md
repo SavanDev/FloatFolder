@@ -1,4 +1,4 @@
-<img src="./FloatFolder/Resources/FloatFolder.png" alt="Float Folder logo" style="zoom: 33%;" />
+<img src="./FloatFolder/Resources/FloatFolder.png" alt="Float Folder logo" width="128px" />
 
 # Float Folder
 
