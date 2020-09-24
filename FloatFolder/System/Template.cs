@@ -25,7 +25,7 @@ namespace FloatFolder
 				}
 			}";
 		
-		public static string AppMain(string shortcuts)
+		public static string AppMain(string shortcuts, string size)
 		{
 			return @"public class App : Form
 				{
@@ -56,12 +56,8 @@ namespace FloatFolder
 			            this.listView1.BorderStyle = BorderStyle.None;
 			            this.listView1.LargeImageList = this.imageList1;
 			            this.listView1.Location = new Point(12, 12);
-			            this.listView1.ShowGroups = false;
-			            this.listView1.Size = new Size(304, 290);
-			            this.listView1.SmallImageList = this.imageList1;
-			            this.listView1.TabIndex = 0;
+			            this.listView1.Size = new Size(" + size + @");
 			            this.listView1.TileSize = new Size(143, 32);
-			            this.listView1.UseCompatibleStateImageBehavior = false;
 						this.listView1.SelectedIndexChanged += this.listView1_SelectedIndexChanged;
 			            // 
 			            // imageList1
@@ -74,7 +70,7 @@ namespace FloatFolder
 			            // 
 			            this.AutoScaleDimensions = new SizeF(6F, 13F);
 			            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			            this.ClientSize = new Size(328, 314);
+			            this.ClientSize = new Size(this.listView1.Width + 12, this.listView1.Height + 12);
 			            this.ControlBox = false;
 			            this.Controls.Add(this.listView1);
 			            this.ShowIcon = false;
@@ -105,8 +101,8 @@ namespace FloatFolder
 			                Location = new Point(Location.X, Cursor.Position.Y);
 			
 			            MaximumSize = MinimumSize = Size;
-			            " + shortcuts + @"
-			        }
+			            " + shortcuts + 
+				  @"}
 			
 			        void Form1_Deactivate(object sender, EventArgs e)
 			        {

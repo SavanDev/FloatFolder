@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Created by SharpDevelop.
+ * Date: 22/09/2020
+ * SavanDev - MIT License
+ */
+using System;
 using System.Linq;
 using System.Windows.Forms;
 

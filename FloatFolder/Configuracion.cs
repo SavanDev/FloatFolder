@@ -1,9 +1,14 @@
-﻿using System;
+﻿/*
+ * Created by SharpDevelop.
+ * Date: 22/09/2020
+ * SavanDev - MIT License
+ */
+using System;
+using System.CodeDom.Compiler;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.CodeDom.Compiler;
 
 namespace FloatFolder
 {
@@ -56,6 +61,10 @@ namespace FloatFolder
 				// Generar ejecutable
 				CodeDomProvider codeProvider = CodeDomProvider.CreateProvider("CSharp");
 				
+				#if DEBUG
+				File.WriteAllText("generatedApp.cs", generatedApp.GenerateApp());
+				#endif
+				
 				CompilerParameters parameters = new CompilerParameters();
 				parameters.GenerateExecutable = true;
 				parameters.OutputAssembly = folderBrowserDialog1.SelectedPath + "\\" + (txtName.Text.Length > 0 ? txtName.Text : "Untitled Folder") + ".exe";
@@ -85,8 +94,7 @@ namespace FloatFolder
 				{
 					pngIcon.Dispose();
 					File.Delete("temp.ico"); //Elimina icono temporal.
-					MessageBox.Show("Generated correctly");
-					Application.Restart();
+					MessageBox.Show("Folder generated successfully!", "Success", MessageBoxButtons.OK);
 				}
 			}
 		}
@@ -107,6 +115,18 @@ namespace FloatFolder
 			{
 				button4.PerformClick();
 			}
+		}
+		
+		void ClearShortcuts()
+		{
+			generatedApp.ClearShortcuts();
+			listBox1.Items.Clear();
+			txtName.Clear();
+			pictureBox1.Image = FloatFolder.Properties.Resource.Folder;
+		}
+		void Button5Click(object sender, EventArgs e)
+		{
+			ClearShortcuts();
 		}
 	}
 }

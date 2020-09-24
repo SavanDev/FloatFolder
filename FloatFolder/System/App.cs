@@ -2,7 +2,7 @@
  * Created by SharpDevelop.
  * Date: 22/09/2020
  * SavanDev - MIT License
-*/
+ */
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -56,7 +56,30 @@ namespace FloatFolder
 				codeShortcut.AppendLine("Url.Add(\"" + item.url.Replace("\\", "\\\\") + "\");");
 			}
 			
-			code.AppendLine(Template.AppMain(codeShortcut.ToString()));
+			string size;
+			switch (shortcuts.Count)
+			{
+				case 0:
+				case 1:
+					size = "64, 64";
+					break;
+				case 2:
+					size = "206, 64";
+					break;
+				case 3:
+					size = "300, 64";
+					break;
+				case 4:
+				case 5:
+				case 6:
+					size = "300, 128";
+					break;
+				default:
+					size = "300, 218";
+					break;
+			}
+			
+			code.AppendLine(Template.AppMain(codeShortcut.ToString(), size));
 			code.AppendLine("}").AppendLine();
 			
 			return code.ToString();

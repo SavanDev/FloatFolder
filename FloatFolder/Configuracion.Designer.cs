@@ -44,6 +44,7 @@
         	this.statusStrip1 = new System.Windows.Forms.StatusStrip();
         	this.lblCredit = new System.Windows.Forms.ToolStripStatusLabel();
         	this.stripVersion = new System.Windows.Forms.ToolStripStatusLabel();
+        	this.button5 = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
         	this.groupBox1.SuspendLayout();
         	this.statusStrip1.SuspendLayout();
@@ -107,7 +108,7 @@
         	// 
         	this.button3.Location = new System.Drawing.Point(6, 122);
         	this.button3.Name = "button3";
-        	this.button3.Size = new System.Drawing.Size(75, 23);
+        	this.button3.Size = new System.Drawing.Size(87, 23);
         	this.button3.TabIndex = 9;
         	this.button3.Text = "Add";
         	this.button3.UseVisualStyleBackColor = true;
@@ -116,7 +117,7 @@
         	// button4
         	// 
         	this.button4.Enabled = false;
-        	this.button4.Location = new System.Drawing.Point(87, 122);
+        	this.button4.Location = new System.Drawing.Point(99, 122);
         	this.button4.Name = "button4";
         	this.button4.Size = new System.Drawing.Size(75, 23);
         	this.button4.TabIndex = 10;
@@ -149,6 +150,7 @@
         	// 
         	// groupBox1
         	// 
+        	this.groupBox1.Controls.Add(this.button5);
         	this.groupBox1.Controls.Add(this.listBox1);
         	this.groupBox1.Controls.Add(this.button3);
         	this.groupBox1.Controls.Add(this.button4);
@@ -181,10 +183,20 @@
         	// 
         	this.stripVersion.Name = "stripVersion";
         	this.stripVersion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-        	this.stripVersion.Size = new System.Drawing.Size(192, 17);
+        	this.stripVersion.Size = new System.Drawing.Size(223, 17);
         	this.stripVersion.Spring = true;
         	this.stripVersion.Text = "toolStripStatusLabel1";
         	this.stripVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+        	// 
+        	// button5
+        	// 
+        	this.button5.Location = new System.Drawing.Point(180, 122);
+        	this.button5.Name = "button5";
+        	this.button5.Size = new System.Drawing.Size(75, 23);
+        	this.button5.TabIndex = 11;
+        	this.button5.Text = "Clear";
+        	this.button5.UseVisualStyleBackColor = true;
+        	this.button5.Click += new System.EventHandler(this.Button5Click);
         	// 
         	// Configuracion
         	// 
@@ -231,5 +243,6 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblCredit;
         private System.Windows.Forms.ToolStripStatusLabel stripVersion;
+        private System.Windows.Forms.Button button5;
     }
 }
