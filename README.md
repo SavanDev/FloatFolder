@@ -10,9 +10,7 @@ Android-like folders for Windows!
 
 ## System Requirements
 
-The program depends on the .NET Framework 4.5 to work.
-
-You can download from the [Microsoft site](https://www.microsoft.com/en-us/download/details.aspx?id=30653).
+The program depends on the [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) to work.
 
 ---
 
